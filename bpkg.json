@@ -1,0 +1,7 @@
+{
+  "name": "bash-pipes-and-socket-sdk",
+  "version": "0.0.0",
+  "description": "Companion repository for https://socketsupply.co/blog/bash-pipes-and-socket-sdk",
+  "scripts": ["src/main.sh"],
+  "files": ["src/index.html"]
+}
