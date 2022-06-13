@@ -274,7 +274,7 @@ function start_application () {
 
   while wait_for_ready_event; do
     warn "Setting 720x360 window size"
-		set_size 720 360
+    set_size 720 360
 
     while true; do
       ## We format for 100 columns wide in batch mode (-b) with 1 iterations (-n)
