@@ -1,17 +1,23 @@
-Bash, Pipes, & Operator Framework
-=================================
+Bash, Pipes, & Socket SDK
+=========================
 
 > This repository is a companion to the
-> [Bash, Pipes, & Operator Framework][blog] blog post.
+> [Bash, Pipes, & Socket SDK][blog] blog post.
 
 ## Running the Application
 
-```sh
-op . -r
+```bash
+ssc . -r -o
+```
+
+Or with [bpkg](https://github.com/bpkg/bpkg):
+
+```bash
+bpkg run start
 ```
 
 ## License
 
 MIT
 
-[blog]: https://socketsupply.co/blog/bash-pipes-and-opfw
+[blog]: https://socketsupply.co/blog/bash-pipes-and-socket-sdk

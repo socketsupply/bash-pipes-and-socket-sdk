@@ -31,18 +31,40 @@
       const terminal = new Terminal({ fontSize: 14, cols: 100 })
 
       terminal.open(main)
-      terminal.write('Waiting for input...')
+      terminal.writeln('Waiting for input...')
+
+      window.system.send({ event: 'ready' })
+
+      window.addEventListener('keydown', (event) => {
+        if ((event.ctrlKey || event.metaKey) && event.key === 'r') {
+          window.location.reload()
+        }
+      })
 
       window.addEventListener('data', (event) => {
         if (typeof event.detail === 'string') {
           const data = decode(event.detail)
           const lines = data.split('\n')
 
+          requestAnimationFrame(() => {
+            terminal.reset()
+          })
+
+          requestAnimationFrame(() => {
+            terminal.clear()
+          })
+
           for (const line of lines) {
-            terminal.writeln(line)
+            requestAnimationFrame(() => {
+              terminal.writeln(line)
+            })
           }
         }
       })
+
+      function decode (data) {
+        return decodeURIComponent(escape(atob(data)))
+      }
     </script>
   </body>
 </html>

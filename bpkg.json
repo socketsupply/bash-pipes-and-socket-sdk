@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "description": "Companion repository for https://socketsupply.co/blog/bash-pipes-and-socket-sdk",
   "scripts": ["src/main.sh"],
-  "files": ["src/index.html"]
+  "files": ["src/index.html"],
+  "commands": {
+    "start": "ssc . -r -o"
+  }
 }
