@@ -7,7 +7,7 @@ Bash, Pipes, & Socket SDK
 ## Running the Application
 
 ```bash
-ssc . -r -o
+ssc compile -r -o .
 ```
 
 Or with [bpkg](https://github.com/bpkg/bpkg):
